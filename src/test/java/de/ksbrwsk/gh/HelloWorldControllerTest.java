@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @WebFluxTest
 class HelloWorldControllerTest {
@@ -20,7 +20,7 @@ class HelloWorldControllerTest {
                 .uri("/index")
                 .exchange()
                 .expectStatus()
-                .is2xxSuccessful()
+                .isOk()
                 .expectBody(String.class)
                 .value(msg -> assertEquals(msg, "Hello World!"));
     }

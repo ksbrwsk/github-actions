@@ -10,7 +10,7 @@
     </parent>
     <groupId>de.ksbrwsk</groupId>
     <artifactId>github-actions</artifactId>
-    <version>1.0.7-SNAPSHOT</version>
+    <version>1.0.8-SNAPSHOT</version>
     <name>github-actions</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -54,9 +54,8 @@
             <plugin>
                 <artifactId>maven-release-plugin</artifactId>
                 <configuration>
-                    <preparationGoals>clean git-changelog:git-changelog scm:checkin -DpushChanges=false
-                        -Dincludes=CHANGELOG.md -Dmessage="[maven-release-plugin] Update CHANGELOG.md" verify
-                    </preparationGoals>
+                    <preparationGoals>clean git-changelog:git-changelog scm:checkin -DpushChanges=false -Dincludes=CHANGELOG.md -Dmessage="[maven-release-plugin] Update CHANGELOG.md" verify</preparationGoals>
+                    <completionGoals>git-changelog:git-changelog scm:checkin -DpushChanges=false -Dincludes=CHANGELOG.md -Dmessage="[maven-release-plugin] Update CHANGELOG.md"</completionGoals>
                 </configuration>
             </plugin>
             <plugin>

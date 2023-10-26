@@ -18,8 +18,7 @@
     </properties>
     <scm>
         <developerConnection>scm:git:https://github.com/ksbrwsk/github-actions.git</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
+   </scm>
 
     <dependencies>
         <dependency>

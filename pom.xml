@@ -9,7 +9,7 @@
     </parent>
     <groupId>de.ksbrwsk</groupId>
     <artifactId>github-actions</artifactId>
-    <version>1.0.5-SNAPSHOT</version>
+    <version>1.0.6-SNAPSHOT</version>
     <name>github-actions</name>
     <description>Demo project for Spring Boot</description>
     <properties>

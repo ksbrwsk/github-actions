@@ -10,7 +10,7 @@
     </parent>
     <groupId>de.ksbrwsk</groupId>
     <artifactId>github-actions</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4-SNAPSHOT</version>
     <name>github-actions</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -51,6 +51,18 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <preparationGoals>clean git-changelog:git-changelog scm:checkin -DpushChanges=false -Dincludes=CHANGELOG.md -Dmessage="[maven-release-plugin] Update CHANGELOG.md" verify</preparationGoals>
+                    <completionGoals>git-changelog:git-changelog scm:checkin -DpushChanges=false -Dincludes=CHANGELOG.md -Dmessage="[maven-release-plugin] Update CHANGELOG.md"</completionGoals>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>info.plichta.maven.plugins</groupId>
+                <artifactId>git-changelog-maven-plugin</artifactId>
+                <version>0.6.0</version>
             </plugin>
         </plugins>
     </build>

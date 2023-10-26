@@ -1,5 +1,7 @@
 # Change Log
 
+## 1.0.5-SNAPSHOT
+
 ## 1.0.4
 * Release 1.0.4-SNAPSHOT. [a8b99bd](a8b99bdd8e6cb1ef783b41fc0e6444841de1d0ae)
 * Merge pull request #2 from ksbrwsk/release/1.0.3 [2b40466](2b4046677809f3154d9e2cb69afa4923aa1509ca)
